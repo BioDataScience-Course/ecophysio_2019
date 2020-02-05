@@ -1,4 +1,4 @@
-# ecophysio_2019
+# écophysiologie des animaux aquatiques : promotion 2019-2020
 
 Ce dépot comprend les supports à la formation pour le stage d'[écophysiologie des animaux aquatiques](http://applications.umons.ac.be/web/fr/pde/2019-2020/ue/US-M1-BIOECO-030-M.htm). Cette formation est encadrée par GROSJEAN Philippe & ENGELS Guyliann.
 
