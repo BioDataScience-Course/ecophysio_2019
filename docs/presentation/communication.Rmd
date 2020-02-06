@@ -1,0 +1,38 @@
+---
+title: "Titre de la présentation"
+subtitle: "Sous-titre"
+author: Auteurs 
+institute: Université de Mons, Belgique\break Laboratoire d'Écologie numérique des Milieux aquatiques\break \includegraphics[width=.08\textwidth,height=.1\textheight]{template/EcoNum-logo.pdf}
+date: ''
+fontfamily: mathpazo
+fontsize: 9pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+SciViews::R
+urchin <- read("urchin_bio", package = "data.io", lang = "fr")
+```
+
+### dia 1
+
+\columnsbegin
+\columnlarge
+```{r,fig.align='center', echo=FALSE, out.width= '90%'}
+chart(urchin, skeleton ~ height %color=% origin) +
+  geom_point()
+```
+\columnsmall
+
+Cette relation semble être \alert{exponentielle}. 
+
+\columnsend
+
+### dia 2
+
+```{r, fig.align='c', out.width= '85%'}
+# pc %>.%
+#   filter(., !is.na(T)) %>.%
+#   pc_plot(data = ., y = "T", x = "number_day", factor = "code",
+#         rect_start = 29.83 + 0:5, rect_end = (29.83 + 0:5) + 0.5)
+```

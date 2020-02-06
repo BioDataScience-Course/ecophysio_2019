@@ -1,0 +1,46 @@
+# Conseils sur les présentations 
+
+## Diviser la diapositive en plusieurs colonnes 
+
+Le template qui vous a été fourni comprend une dia divisé en deux parties via les instructions :
+
+```
+\columnsbegin
+\columnssmall
+
+texte souhaité
+
+\columnslarge
+
+texte souhaité
+
+\columnsend
+```
+
+Il existe d'autres instructions comme 
+
+```
+\columnshalf 
+\columnverylarge 
+\columnverysmall
+```
+
+## Mise en évidence du texte 
+
+La mise en évidence du texte est réalisé avec l'instruction :
+
+```
+\alert{mot}
+```
+
+## Aérer la diapositive
+
+L'introduction d'espace est préalisable avec l'instruction :
+
+```
+\hfill
+```
+
+# Astuce en plus
+
+Le fond des diapositives peut être modifié dans le fichier _header.tex à la ligne 41
