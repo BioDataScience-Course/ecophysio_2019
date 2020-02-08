@@ -8,6 +8,6 @@ beamer_presentation:
   fig_width: 5
   fig_height: 4
   fig_crop: false
-  fig_caption: false
+  fig_caption: true
   includes:
     in_header: "template/_header.tex"

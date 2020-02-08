@@ -16,15 +16,17 @@ urchin <- read("urchin_bio", package = "data.io", lang = "fr")
 
 ### Organisation de l'activité
 
-L'activité se divise en X éapes :
+L'activité se divise en 3 étapes :
 
-- 2h : Bibliographique sur la fluorescence 
+- 2h : Recherche bibliographique sur la fluorescence 
 - 2h : Utilisation de l'Imaging PAM
 - 2h : Rédaction du rapport
 
 ### Fluorescence
 
 La fluorescence émise quantifie de manière indirecte \alert{la photosynthèse} tout comme la production d'oxygène. Avant d'employer l'Imaging Pam, vous devez avoir une vision précise de la photosynthèse et du role de la fluorescence dans ce méchanisme.
+
+![ [Photosynthesis light reaction diagram](https://www.flickr.com/photos/blueridgekitties/4619809768/in/photostream/) ](figures/photosynthesis.jpg){width=60%}
 
 Une fois vos idées claires sur la photosynthèse, vous allez vous intéressez à l'utilisation du PAM dans l'ecophysiologie des **animaux aquatiques**.
 
@@ -33,7 +35,7 @@ Une fois vos idées claires sur la photosynthèse, vous allez vous intéressez �
 \columnsbegin
 \columnlarge
 
-![](figures/dispo_pam.jpg){width=80%}
+![Photographie de l'Imaging-Pam](figures/dispo_pam.jpg){width=80%}
 
 \columnsmall
 
@@ -51,13 +53,13 @@ L'Utilisation de l'Imaging Pam peut se décomposer en 3 étapes :
 
 \columnhalf 
 
-![](figures/ip.jpg){width=90%}
+![Utilisation de l'Imaging Pam sur une bouture de corail](figures/ip.jpg){width=90%}
 
 \columnhalf 
 
 L'imaging PAM permet d'obtenir une image en 2D de l'organisme d'intérêt. 
 
-![](figures/ip1.jpg){width=75%}
+![Image obtenue avec l'Imaging Pam](figures/ip1.jpg){width=75%}
 
 \columnsend
 
@@ -65,7 +67,7 @@ L'imaging PAM permet d'obtenir une image en 2D de l'organisme d'intérêt.
 
 L'image obtenue peut être analysée et les mesures peuvent être extraites au format .csv. 
 
-![](figures/ip1.jpg){width=55%}
+![Image obtenue avec l'Imaging Pam](figures/ip1.jpg){width=55%}
 
 Comme vous pouvez le voir, différentes zones d'intérêt peuvent être placé sur l'image brute.
 
