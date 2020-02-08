@@ -60,6 +60,8 @@ data.io::read("coral_growth", package = "coral.growth") %>.%
 
 cg %>.%
   filter(., date <= 30) -> cg_red
+
+
 ```
 
 Partons d'un cas concret avec une bouture d'une masse initiale de `r round(min(cg_red$skw),3)`.
@@ -118,3 +120,10 @@ Vous devez réaliser un rapport commun pour l'ensemble des participants. Ce dern
 - une petite conclusion sur la croissance et la modélisation de cette croissance.
 
 Il est préférable de réaliser ce rapport dans un projet RStudio cohérent.
+
+
+```{r, eval=FALSE}
+write(cg_red, file = "../../data/coral_growth/growth_train.xlsx", type = "xlsx")
+write(cg, file = "../../data/coral_growth/growth_all.xlsx", type = "xlsx")
+```
+
