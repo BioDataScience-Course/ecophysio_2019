@@ -96,6 +96,8 @@ server <- function(input, output) {
     
     # O2 plot
     res$timeh <- res$time / 60
+    library(ggplot2)
+    library(chart)
     chart(data = res, O2 ~ timeh) +
       geom_line() +
       geom_hline(yintercept = O2Range, col = "red", lty = 2) +
