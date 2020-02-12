@@ -16,14 +16,14 @@ source("../../R/coral_growth/skeleton_weight.R")
 
 ### Organisation de l'activité
 
-L'activité se divise en 3 étapes :
+L'activité se divise en plusieurs étapes :
 
 - 1h00 : Présentation théorique sur la respirométrie 
-- 1h30  :Recherche bibliographique sur l'utilisation de la respirométrie sur des organismes aquatiques (plante, coraux, oursins, ...)
+- 1h00  :Recherche bibliographique sur l'utilisation de la respirométrie sur des organismes aquatiques (plante, coraux, oursins, ...)
 - 0h30 : Discussion et débriefing sur vos recherches. 
-- 1h : Analyse de cas
-- 0h30 : simulation avec une Shiny App
-- 2h : Rédaction du rapport
+- 0h30 : Simulation avec une Shiny App
+- 1h00 : Analyse de cas
+- 2h00 : Rédaction du rapport
 
 ### Analyse de cas particuliers
 
@@ -47,7 +47,7 @@ ___
 - *Ophiura textura* avec une masse de 2.72 grammes
 
 ```{r ophiura, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont deux *Ophiura textura* et ont un poids frais de 2.72 grammes"}
-plot(measure1$Time, measure1$O2_2N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab="Temps")
+plot(measure1$Time, measure1$O2_2N, type = "l",ylab = "Oxygène dissous (mg/L)", xlab="Temps")
 #summary(measure1$O2_2N)
 ```
 
@@ -56,7 +56,7 @@ ___
 - 3 *Patella vulgata* avec une masse de 28.37 grammes
 
 ```{r, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont trois *Patella vulgata* et ont un poids frais de 28.37 grammes."}
-plot(measure1$Time, measure1$O2_3N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab="Temps")
+plot(measure1$Time, measure1$O2_3N, type = "l",ylab = "Oxygène dissous (mg/L)", xlab="Temps")
 #summary(measure1$O2_3N)
 ```
 
@@ -65,7 +65,7 @@ ___
 - *Posidonia oceanica* avec une masse de 73.83 grammes
 
 ```{r posido, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont des *Posidonia oceanica* et ont un poids frais de 73.83 grammes."}
-plot(measure1$Time, measure1$O2_4N, type = "l", ylab = "Concentration en oxygène (mg/L)", xlab = "Temps")
+plot(measure1$Time, measure1$O2_4N, type = "l", ylab = "Oxygène dissous (mg/L)", xlab = "Temps")
 #summary(measure1$O2_4N)
 ```
 
@@ -75,7 +75,7 @@ ___
 
 ```{r, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont des *Sphaerococcus coronofolius* et ont un poids frais de 21.83 grammes."}
 
-plot(measure1$Time, measure1$O2_5N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab = "Temps")
+plot(measure1$Time, measure1$O2_5N, type = "l",ylab = "Oxygène dissous (mg/L)", xlab = "Temps")
 #summary(measure1$O2_5N)
 ```
 
@@ -86,7 +86,7 @@ ____
 
 ```{r, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont des microorganismes."}
 
-plot(measure1$Time, measure1$O2_6N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab = "Temps")
+plot(measure1$Time, measure1$O2_6N, type = "l",ylab = "Oxygène dissous (mg/L)", xlab = "Temps")
 #summary(measure1$O2_6N)
 ```
 
@@ -99,7 +99,7 @@ Le rapport et le code de ce travail sont disponible via le lien suivant : <https
 
 ### Un peu de R 
 
-Vous trouvez un court tutoriel qui présente : 
+Vous trouvez un court tutoriel qui présente les fonctions utiles dans R  via le lien suivant : <https://github.com/EcoNum/respirometry_tuto> 
 
 - la correction des valeurs du respirométre avec un appareil de plus haute précision :  `correct_monitoring()`
 
