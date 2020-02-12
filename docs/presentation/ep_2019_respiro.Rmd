@@ -1,0 +1,123 @@
+---
+title: "Etude du bilan en oxygène via la respirométrie"
+subtitle: "Ecophysiologie des animaux aquatiques"
+author: "Grosjean & Engels" 
+institute: Université de Mons, Belgique\break Laboratoire d'Écologie numérique des Milieux aquatiques\break \includegraphics[width=.08\textwidth,height=.1\textheight]{template/EcoNum-logo.pdf}
+date: ''
+fontfamily: mathpazo
+fontsize: 9pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+SciViews::R
+source("../../R/coral_growth/skeleton_weight.R")
+```
+
+### Organisation de l'activité
+
+L'activité se divise en 3 étapes :
+
+- 1h00 : Présentation théorique sur la respirométrie 
+- 1h30  :Recherche bibliographique sur l'utilisation de la respirométrie sur des organismes aquatiques (plante, coraux, oursins, ...)
+- 0h30 : Discussion et débriefing sur vos recherches. 
+- 1h : Analyse de cas
+- 0h30 : simulation avec une Shiny App
+- 2h : Rédaction du rapport
+
+### Analyse de cas particuliers
+
+Plusieurs exemples vous vous être présenté. Critiquez toutes les expériences.
+
+____
+
+- *Holothuria forskali* avec une masse de 74.85 grammes
+
+```{r}
+measure1 <- readRDS("../../data/respirometry/respiro.rds")
+```
+
+```{r holo, echo=FALSE,  fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps L'organisme utilisé est *Holothuria forskali* et a un poids frais de 74.85 grammes"}
+plot(measure1$Time, measure1$O2_1N, type = "l", ylab = "Oxygène dissous (mg/L)", xlab ="Temps")
+# summary(measure1$O2_1N)
+```
+
+___
+
+- *Ophiura textura* avec une masse de 2.72 grammes
+
+```{r ophiura, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont deux *Ophiura textura* et ont un poids frais de 2.72 grammes"}
+plot(measure1$Time, measure1$O2_2N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab="Temps")
+#summary(measure1$O2_2N)
+```
+
+___
+
+- 3 *Patella vulgata* avec une masse de 28.37 grammes
+
+```{r, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont trois *Patella vulgata* et ont un poids frais de 28.37 grammes."}
+plot(measure1$Time, measure1$O2_3N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab="Temps")
+#summary(measure1$O2_3N)
+```
+
+___
+
+- *Posidonia oceanica* avec une masse de 73.83 grammes
+
+```{r posido, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont des *Posidonia oceanica* et ont un poids frais de 73.83 grammes."}
+plot(measure1$Time, measure1$O2_4N, type = "l", ylab = "Concentration en oxygène (mg/L)", xlab = "Temps")
+#summary(measure1$O2_4N)
+```
+
+___
+
+- *Sphaerococcus coronofolius* avec une masse de 21.83 grammes
+
+```{r, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont des *Sphaerococcus coronofolius* et ont un poids frais de 21.83 grammes."}
+
+plot(measure1$Time, measure1$O2_5N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab = "Temps")
+#summary(measure1$O2_5N)
+```
+
+
+____
+
+-  Microorganismes 
+
+```{r, echo=FALSE, message=FALSE, fig.cap= "Variation de la concentration en oxygène (mg/L) au cours du temps. Les organismes utilisés sont des microorganismes."}
+
+plot(measure1$Time, measure1$O2_6N, type = "l",ylab = "Concentration en oxygène (mg/L)", xlab = "Temps")
+#summary(measure1$O2_6N)
+```
+
+___
+
+Les cas pratiques présentés proviennent d'expériences de respirométries réalisées sur différents organismes lors du stage d'écophysiologie des animaux aquatiques de l'année acédémique 2015-2016. 
+
+Le rapport et le code de ce travail sont disponible via le lien suivant : <https://github.com/BioDataScience-Course/ecophysio_2015>
+
+
+### Un peu de R 
+
+Vous trouvez un court tutoriel qui présente : 
+
+- la correction des valeurs du respirométre avec un appareil de plus haute précision :  `correct_monitoring()`
+
+- le calcul du bilan en oxygène sur base de données de respirométrie :  `respirometry()`
+
+Vous avez à votre disposition deux projets sur github sur la respirométrie
+
+
+### Rapport
+
+Vous devez réaliser un rapport commun pour l'ensemble des participants. Ce dernier doit contenir : 
+
+- une introduction sur la respirométrie (théorique)
+
+- une section analyse approfondie sur un organisme choisi.
+
+- une petite conclusion sur la respirométrie
+
+Lors de nos différents ateliers, l'ensemble des ressources sont disponible via le lien <https://github.com/BioDataScience-Course/ecophysio_2019>
+
+Il est préférable de réaliser ce rapport dans un projet RStudio cohérent.
